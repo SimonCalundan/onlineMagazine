@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url(./partials/idealer.css);
+@import url(./partials/myter.css);
+@import url(./partials/ped.css);
+
+
+
+/* 
+
+Al css er skrevet med Sass i en .scss fil. Selve style.scss filen er med i mappen, heri står alle kommentarer og variable.
+
+*/
+
+
+html {
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+// Variabler 
+
+$color1: #3F76BF;
+$color2: #001128;
+$color3: #8F8F8F;
+$color4: #FFFFFF;
+$box-shadow: #8f8f8faa;
+
+
+
+// Styling af header 
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 3rem;
+    height: 10vh;
+    
+    
+
+
+    
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+
+    h1 {
+        color: $color2;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    img {
+        aspect-ratio: 1800 / 1800;
+        width: 100%;
+        
+    }
+}
+
+.image-wrapper {
+    width: 7rem; 
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-right: 7rem;
+
+    ul {
+        display: flex;
+        column-gap: 3rem;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: $color2;
+        white-space: nowrap;
+        font-size: 2rem;
+        font-weight: 400;
+
+    }
+
+    li :hover {
+        transition: ease-in-out 100ms;
+        color: #3F76BF;
+        
+    }
+
+}
+
+// Styling af main content 
+
+main {
+    background-image: url(../img/baggrund_sort.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: $color4;
+    row-gap: 2rem;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 2rem;
+        font-weight: 200;
+    }
+
+    a {
+        background-color: $color1;
+        text-decoration: none;
+        color: $color4;
+        font-size: 2rem;
+        font-weight: 300 ;
+        padding: 1rem;
+        border-radius: 1.5rem;
+        transition: ease-in-out 300ms;
+        
+
+    }
+
+    a:hover {
+        transition: ease-in-out 300ms;
+        background-color: #3767a4;
+    }
+}
+
+// Styling af article section 
+
+
+#article-section-header {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 200;
+    margin: 4rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    gap: 3rem 3%;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+
+.grid-item {
+    display: flex;
+    border: 1.8px solid $color2;
+    width: 45vw;
+    border-radius: 0.3rem;
+    box-shadow: 2px 2px 5px 1px $box-shadow;
+    transition: ease-in-out 200ms;
+
+    h2 {
+        font-size: 2.2rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1.7rem;
+        font-weight: 300;
+        line-height: 1.8rem;
+        color: rgb(122, 122, 122);
+        
+    }
+
+    img {
+        width: 20%;
+        margin-right: 1rem;
+        border-right: 1.5px solid $color2;
+        border-top-left-radius: 0.3rem;
+        border-bottom-left-radius: 0.3rem;
+        
+        
+    }
+    
+    a {
+        text-decoration: none;
+        color: $color1;
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+
+    a:hover {
+        transition: ease-in-out 150ms;
+        color: $color2;
+
+    }
+}
+
+.grid-item:hover {
+    transition: ease-in-out 200ms;
+    box-shadow: 2px 2px 20px 1px $box-shadow;
+   // width: 46vw;
+    
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    padding-left: 0rem;
+
+    
+    
+
+}
+
+
+
+
+// Styling af svg overgang
+
+
+.svg-overlap {
+    aspect-ratio: 900/100 ;
+    width: 98.97vw; // Der var en usynlig hvid streg ved siden af hvis width var 100%
+    width: 100%;
+    display: block;
+}
+
+
+// Styling af footer
+
+footer {
+    padding-bottom: 7rem;
+    background-color: $color2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        fill: white;
+        width: 100%;
+    }
+
+    .image-wrapper--footer {
+        width: 10rem;
+        display: flex;
+        align-items: center;
+        
+        h1 {
+            color: $color4;
+            white-space: nowrap;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+        
+    }
+
+
+    li {
+        margin: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color4;
+        font-size: 1.8rem;
+        font-weight: 400;
+        
+    }
+
+    a:hover {
+        transition: 150ms ease-in-out;
+        color: $color3;
+    }
+}
+
+address {
+    color: $color4;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-style: italic;
+    font-weight: 200;
+
+    h2 {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+}
+
+.form-section {
+    color: $color4;
+    margin-top: 2rem;
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    label {
+        font-size: 1.3rem;
+    }
+    
+    .mail {
+        display: flex;
+        flex-direction: column;
+    }
+    input[type=email] {
+        background-color: #0f213a;
+        padding: 0.7rem;
+        border: none;
+        border-radius: 1rem;
+        box-sizing: border-box;
+        margin: 1rem 0;
+        color: white;
+        width: 16rem;
+        margin-bottom: 1.5rem;
+        transition: ease-in-out 400ms;
+    }
+
+    input[type=email]:focus {
+        outline: none;
+        transition: ease-in-out 400ms;
+        width: 100%;
+    }
+
+    .select {
+     margin-top: 1rem;
+
+    
+    }
+
+  
+} 
+
+.checkbox-round {
+    
+    width: 1em;
+    height: 1em;
+    background-color: #0f213a;
+    border-radius: 50%;
+    vertical-align: middle;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    
+}
+.checkbox-round:checked {
+    background-color: $color1;
+}
+
+input[type=submit] {
+    outline: none;
+    margin-top: 1.3rem;
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.8rem;
+    background-color: #0f213a;
+    color: white;
+    transition: ease-in-out 300ms;
+    
+}
+input[type=submit]:hover {
+    transition: ease-in-out 300ms;
+    background-color: $color1;
+    cursor: pointer;
+    
+    
+}
+
+
+.arrow {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 4rem;
+    background-color: $color2;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: 2px solid $color4;
+    transition: ease-in-out 200ms;
+
+    a {
+        text-decoration: none;
+        color: $color1;
+    }
+}
+
+.arrow:hover {
+    transition: ease-in-out 200ms;
+    background-color: $color4;
+    border-color: black;
+}
